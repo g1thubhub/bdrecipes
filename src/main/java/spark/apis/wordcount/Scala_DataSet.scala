@@ -13,7 +13,7 @@ object Scala_DataSet {
       .appName("Scala Word Count DataSet")
       .getOrCreate()
     import session.implicits._ // needed for functions below that require implicit encoders
-    val lines: Dataset[String] = session.read.text("src/main/resources/moby_dick.txt").as[String]
+    val lines: Dataset[String] = session.read.textFile("src/main/resources/moby_dick.txt")
 
     // Preprocessing & reducing the input lines:
     val tokens: Dataset[String] = lines.flatMap(_.split("\\s+"))
