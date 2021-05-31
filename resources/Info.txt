@@ -1,0 +1,3 @@
+warc.sample and wet.sample are a small subset of one file of the October 2019 common crawl. The full file can be downloaded from
+https://commoncrawl.s3.amazonaws.com/crawl-data/CC-MAIN-2019-43/segments/1570986647517.11/warc/CC-MAIN-20191013195541-20191013222541-00000.warc.gz
+https://commoncrawl.s3.amazonaws.com/crawl-data/CC-MAIN-2019-43/segments/1570986647517.11/wet/CC-MAIN-20191013195541-20191013222541-00000.warc.wet.gz
