@@ -7,7 +7,7 @@ from pyspark.sql.functions import count, col
 from tutorials.module1.python.utilities.helper_python import create_session, extract_raw_records, parse_raw_warc
 
 if __name__ == "__main__":
-    sample_location = (argv[1]) if len(argv) > 2 else '/Users/me/IdeaProjects/bdrecipes/resources/warc.sample'  # ToDo: Modify path
+    sample_location = (argv[1]) if len(argv) >= 2 else '/Users/me/IdeaProjects/bdrecipes/resources/warc.sample'  # ToDo: Modify path
     spark: SparkSession = create_session(3, "Query Plans")
     spark.sparkContext.setLogLevel("TRACE")
     lang_tag_mapping = [('en', 'english'), ('pt-pt', 'portugese'), ('cs', 'czech'), ('de', 'german'), ('es', 'spanish'),
