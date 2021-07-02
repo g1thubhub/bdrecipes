@@ -1,6 +1,6 @@
 services:
   spark-master:
-    image: my-app:dev
+    image: bdrecipes/spark-on-docker
     container_name: spark-master
     hostname: spark-master
     ports:
@@ -16,7 +16,7 @@ services:
   worker1:
     container_name: worker1
     hostname: worker1
-    image: my-app:dev
+    image: bdrecipes/spark-on-docker
     depends_on:
       - spark-master
     ports:
@@ -32,7 +32,7 @@ services:
   worker2:
     container_name: worker2
     hostname: worker2
-    image: my-app:dev
+    image: bdrecipes/spark-on-docker
     depends_on:
       - spark-master
     ports:
