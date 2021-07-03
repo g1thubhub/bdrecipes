@@ -1,3 +1,3 @@
-Spark via RDD, DataFrame, DataSet APIs in Scala, Java, Python
+Codebase for https://g1thubhub.github.io/index.html
 
-A detailled description can be found at https://g1thubhub.github.io/2018/05/01/sparkapis.html
+Build information described at https://g1thubhub.github.io/intro-code.html
