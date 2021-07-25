@@ -8,6 +8,8 @@ COPY target/bdrecipes-phil.jar .
 
 COPY scripts/launch_spark_daemon.sh .
 
+COPY scripts/launch_master_daemon.sh .
+
 COPY requirements.txt .
 
 RUN pip3 install -r requirements.txt
