@@ -8,7 +8,7 @@ COPY target/bdrecipes-phil.jar .
 
 COPY scripts/launch_spark_daemon.sh .
 
-COPY scripts/launch_master_daemon.sh .
+COPY scripts/launch_spark_k8daemon.sh .
 
 COPY requirements.txt .
 

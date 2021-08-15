@@ -1,0 +1,23 @@
+kind: ReplicationController
+apiVersion: v1
+metadata:
+  name: spark-worker-controller
+spec:
+  replicas: 2
+  selector:
+    component: spark-worker
+  template:
+    metadata:
+      labels:
+        component: spark-worker
+    spec:
+      containers:
+        - name: spark-worker
+          image: bdrecipes/spark-on-docker:latest
+          command: ["/bin/sh"]
+          args: ["/opt/spark/work-dir/launch_spark_k8daemon.sh", "worker"]
+          ports:
+            - containerPort: 8081
+          resources:
+            requests:
+              cpu: 100m
