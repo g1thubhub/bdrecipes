@@ -1,6 +1,8 @@
 #!/bin/sh
 
 daemon_type=$1
+export SPARK_USER=me
+unset SPARK_MASTER_PORT  # avoid conflict with K8s service env variable
 if [ "$daemon_type" == "master" ]; then
   echo "Launching a Spark Master binding to `hostname` starting on port 7077 with UI on port 8080"
   /opt/spark/bin/spark-class org.apache.spark.deploy.master.Master --host `hostname` --port 7077 --webui-port 8080
