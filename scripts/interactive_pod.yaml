@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: interactive-pod
+  labels:
+    usage: spark-apps
+spec:
+  containers:
+  - name: interactive-container
+    image: bdrecipes/spark-on-docker:latest
+    imagePullPolicy: IfNotPresent
+    command:
+      - "sleep"
+      - "10000"
+    env:
+      - name: CACERT
+        value: "/var/run/secrets/kubernetes.io/serviceaccount/ca.crt"
+      - name: TOKEN
+        value: "/var/run/secrets/kubernetes.io/serviceaccount/token"     
+  restartPolicy: Never
+  serviceAccountName: bigdata-sa
