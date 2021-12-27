@@ -28,7 +28,6 @@
                         <arg>-Xlint:all</arg>
                     </compilerArgs>
                 </configuration>
-
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -119,7 +118,6 @@
             </plugin>
         </plugins>
     </build>
-
     <dependencies>
         <dependency>
             <groupId>org.apache.spark</groupId>
@@ -139,5 +137,4 @@
             <version>${scala.version}</version>
         </dependency>
     </dependencies>
-
 </project>

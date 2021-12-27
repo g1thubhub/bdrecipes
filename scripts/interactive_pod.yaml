@@ -11,7 +11,7 @@ spec:
     imagePullPolicy: IfNotPresent
     command:
       - "sleep"
-      - "10000"
+      - "7200"
     env:
       - name: CACERT
         value: "/var/run/secrets/kubernetes.io/serviceaccount/ca.crt"
