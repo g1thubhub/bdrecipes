@@ -123,13 +123,13 @@
             <groupId>org.apache.spark</groupId>
             <artifactId>spark-core_2.12</artifactId>
             <version>${spark.version}</version>
-            <!--            <scope>provided</scope>-->
+            <scope>provided</scope> <!-- Comment out when running via IntelliJ -->
         </dependency>
         <dependency>
             <groupId>org.apache.spark</groupId>
             <artifactId>spark-sql_2.12</artifactId>
             <version>${spark.version}</version>
-            <!--            <scope>provided</scope>-->
+            <scope>provided</scope> <!-- Comment out when running via IntelliJ -->
         </dependency>
         <dependency>
             <groupId>org.scala-lang</groupId>
