@@ -31,3 +31,4 @@ if __name__ == "__main__":
     joined_df.show()
     joined_df.explain(True)
     time.sleep(10 * 60)  # Freeze for 10 minutes
+    spark.stop()

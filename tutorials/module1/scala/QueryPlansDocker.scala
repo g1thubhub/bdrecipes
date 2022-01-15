@@ -32,5 +32,6 @@ object QueryPlansDocker {
     joinedDf.show()
     joinedDf.explain(true)
     Thread.sleep(10L * 60L * 1000L) // Freeze for 10 minutes
+    spark.stop()
   }
 }
